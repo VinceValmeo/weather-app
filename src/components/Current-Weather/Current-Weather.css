@@ -8,7 +8,8 @@
   padding: 1rem;
 }
 
-.weather__card__top {
+.weather__card__top,
+.weather__card__bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,4 +32,34 @@
 
 .weather__icon {
   width: 100px;
+}
+
+.temperature {
+  font-weight: 600;
+  font-size: 70px;
+  width: auto;
+  letter-spacing: -5px;
+  margin: 10px 0;
+}
+
+.details {
+  width: 100%;
+  padding-left: 20px;
+}
+
+.parameter__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.parameter__label {
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.parameter__value {
+  text-align: right;
+  font-weight: 900;
+  font-size: 12px;
 }

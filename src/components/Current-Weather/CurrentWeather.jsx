@@ -1,6 +1,7 @@
 import React from "react";
 import "./Current-Weather.css";
 import { day } from "../../assets/assests";
+import WeatherDetail from "./WeatherDetail";
 
 function CurrentWeather() {
   return (
@@ -16,28 +17,12 @@ function CurrentWeather() {
         <div className="weather__card__bottom">
           <p className="temperature">18°C</p>
           <div className="details">
-            <div className="parameter__row">
-              <span className="parameter__label">Details</span>
-            </div>
+            <div className="parameter__label">Details</div>
 
-            <div className="parameter_row">
-              <span className="parameter__label">Feels Like</span>
-              <span className="parameter__value">32°C</span>
-            </div>
-            <div className="parameter_row">
-              <span className="parameter__label">Wind</span>
-              <span className="parameter__value">2m/s</span>
-            </div>
-
-            <div className="parameter_row">
-              <span className="parameter__label">Humidity</span>
-              <span className="parameter__value">15%</span>
-            </div>
-
-            <div className="parameter_row">
-              <span className="parameter__label">Pressure</span>
-              <span className="parameter__value">15hPa</span>
-            </div>
+            <WeatherDetail label="Feels Like" value="32°C" />
+            <WeatherDetail label="Wind" value="2m/s" />
+            <WeatherDetail label="Humidity" value="15%" />
+            <WeatherDetail label="Pressure" value="15hPa" />
           </div>
         </div>
       </div>
