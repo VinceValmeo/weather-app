@@ -3,26 +3,37 @@ import "./Current-Weather.css";
 import { day } from "../../assets/assests";
 import WeatherDetail from "./WeatherDetail";
 
-function CurrentWeather() {
+function CurrentWeather({ data }) {
   return (
     <div className="CurrentWeather__container">
       <div className="weather__card">
         <div className="weather__card__top">
           <div className="weather__card__top__text">
-            <p className="city">Belgrade</p>
-            <p className="weather__description">Sunny</p>
+            <p className="city">{data.city}</p>
+            <p className="weather__description">
+              {data.weather[0].description}
+            </p>
           </div>
-          <img alt="weather icon" className="weather__icon" src={day} />
+          <img
+            alt="weather icon"
+            className="weather__icon"
+            src={`src/assets/${data.weather[0].icon}.png`}
+          />
         </div>
         <div className="weather__card__bottom">
-          <p className="temperature">18°C</p>
+          <p className="temperature">{Math.round(data.main.temp) + "°C"}</p>
           <div className="details">
             <div className="parameter__label">Details</div>
-
-            <WeatherDetail label="Feels Like" value="32°C" />
-            <WeatherDetail label="Wind" value="2m/s" />
-            <WeatherDetail label="Humidity" value="15%" />
-            <WeatherDetail label="Pressure" value="15hPa" />
+            <WeatherDetail
+              label="Feels Like"
+              value={Math.round(data.main.feels_like) + "°C"}
+            />
+            <WeatherDetail label="Wind" value={data.wind.speed + " m/s"} />
+            <WeatherDetail label="Humidity" value={data.main.humidity + "%"} />
+            <WeatherDetail
+              label="Pressure"
+              value={data.main.pressure + " pHa"}
+            />
           </div>
         </div>
       </div>
