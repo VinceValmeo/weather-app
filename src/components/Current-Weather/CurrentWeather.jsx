@@ -3,12 +3,22 @@ import "./Current-Weather.css";
 import WeatherDetail from "./WeatherDetail";
 
 function CurrentWeather({ data }) {
+  const country = data.city.split(",");
+  const countryName = country[0];
+  const countryCode = country[1].trim().toLowerCase();
+  const flagElement = (
+    <span className={`flag-icon flag-icon-${countryCode}`}></span>
+  );
+  console.log(country);
   return (
     <div className="CurrentWeather__container">
       <div className="weather__card">
         <div className="weather__card__top">
           <div className="weather__card__top__text">
-            <p className="city">{data.city}</p>
+            <span className="city">
+              {countryName} {flagElement}
+            </span>
+
             <p className="weather__description">
               {data.weather[0].description}
             </p>

@@ -33,6 +33,9 @@ function App() {
 
   return (
     <div className="app__container">
+      <div className="title">
+        <h1>Atmosify</h1>
+      </div>
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecastWeather && <Forecast data={forecastWeather} />}

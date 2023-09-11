@@ -27,7 +27,6 @@ function Forecast({ data }) {
 
   return (
     <div className="forecast__container">
-      <label className="title">Daily Label</label>
       <Accordion allowZeroExpanded>
         {data.list.splice(0, 7).map((item, index) => (
           <AccordionItem key={index}>
@@ -44,8 +43,7 @@ function Forecast({ data }) {
                     {item.weather[0].description}
                   </label>
                   <label className="min-max">
-                    {Math.round(item.main.temp_min)}°C /{" "}
-                    {Math.round(item.main.temp_max)}°C{" "}
+                    {Math.round(item.main.temp_min)}°C{" "}
                   </label>
                 </div>
               </AccordionItemButton>
