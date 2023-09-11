@@ -1,6 +1,5 @@
 import React from "react";
 import "./Current-Weather.css";
-import { day } from "../../assets/assests";
 import WeatherDetail from "./WeatherDetail";
 
 function CurrentWeather({ data }) {
