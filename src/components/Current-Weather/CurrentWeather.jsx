@@ -31,7 +31,7 @@ function CurrentWeather({ data }) {
             <WeatherDetail label="Humidity" value={data.main.humidity + "%"} />
             <WeatherDetail
               label="Pressure"
-              value={data.main.pressure + " pHa"}
+              value={data.main.pressure + " hPa"}
             />
           </div>
         </div>
