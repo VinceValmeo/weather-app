@@ -34,7 +34,7 @@ function Forecast({ data }) {
               <AccordionItemButton>
                 <div className="daily__item">
                   <img
-                    src={`src/assets/${item.weather[0].icon}.png`}
+                    src={`src/assets/icons/${item.weather[0].icon}.png`}
                     className="icon-small"
                     alt="weather"
                   />

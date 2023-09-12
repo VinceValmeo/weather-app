@@ -26,7 +26,7 @@ function CurrentWeather({ data }) {
           <img
             alt="weather icon"
             className="weather__icon"
-            src={`src/assets/${data.weather[0].icon}.png`}
+            src={`src/assets/icons/${data.weather[0].icon}.png`}
           />
         </div>
         <div className="weather__card__bottom">
