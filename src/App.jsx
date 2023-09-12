@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
-import { Search, CurrentWeather, Forecast } from "./components/components";
+import {
+  Header,
+  Search,
+  CurrentWeather,
+  Forecast,
+  Footer,
+} from "./components/components";
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./API/api";
 
 function App() {
@@ -33,12 +39,28 @@ function App() {
 
   return (
     <div className="app__container">
-      <div className="title">
-        <h1>Atmosify</h1>
-      </div>
+      <Header />
       <Search onSearchChange={handleOnSearchChange} />
-      {currentWeather && <CurrentWeather data={currentWeather} />}
-      {forecastWeather && <Forecast data={forecastWeather} />}
+      <div className="weather__container">
+        <div className="current__weather">
+          {currentWeather && <CurrentWeather data={currentWeather} />}
+        </div>
+        <div className="forecast__weather">
+          {" "}
+          {forecastWeather && <Forecast data={forecastWeather} />}
+        </div>
+      </div>
+      <div className="about__app">
+        <h2>Introducing Atmosify: Your Always Ready Weather Partner!</h2>
+        <p>
+          Experience weather planning like never before with Atmosify. Benefit
+          from highly accurate forecasts in your city of choice around the
+          world. Be informed, stay ready—Atmosify is here to assist.{" "}
+        </p>
+        <img src="src/assets/misc/atmosify_mockup.png" />
+        <h4> Download today for a smarter approach to weather planning!</h4>
+      </div>
+      <Footer />
     </div>
   );
 }

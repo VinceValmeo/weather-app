@@ -1,0 +1,15 @@
+.title {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title img {
+  height: 60px;
+  margin-right: 0.5rem;
+}
+
+.title span {
+  font-size: 12px;
+  margin-left: 0.5rem;
+}

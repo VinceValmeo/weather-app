@@ -1,4 +1,34 @@
 .app__container {
-  max-width: 1080px;
-  margin: 20px auto;
+  padding: 0.5rem 1rem;
+}
+
+.current__weather {
+  margin-bottom: 2rem;
+}
+
+.about__app {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.about__app p {
+  max-width: 400px; /* Adjust this value as needed */
+  word-wrap: break-word;
+  letter-spacing: 0.7px;
+  line-height: 20px;
+}
+
+.about__app img {
+  width: 70%;
+  margin: 3rem 0;
+}
+
+.about__app h4 {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
 }
