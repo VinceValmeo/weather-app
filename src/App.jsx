@@ -8,6 +8,7 @@ import {
   Footer,
 } from "./components/components";
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./API/api";
+import { mockUp } from "./assets";
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState();
@@ -57,10 +58,7 @@ function App() {
           from highly accurate forecasts in your city of choice around the
           world. Be informed, stay ready—Atmosify is here to assist.{" "}
         </p>
-        <img
-          src="src/assets/misc/atmosify_mockup.png"
-          alt="Atmosify on different devices"
-        />
+        <img src={mockUp} alt="Atmosify on different devices" />
         <h4> Download today for a smarter approach to weather planning!</h4>
       </div>
       <Footer />
