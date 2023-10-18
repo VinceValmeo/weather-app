@@ -30,7 +30,7 @@ function CurrentWeather({ data }) {
             // src={`/icons/${data.weather[0].icon}.png`}
             // src={`icons/${data.weather[0].icon}.png`}
             // <%= console.log(data.weather[0].icon) =%>
-            src={`./icons/${data.weather[0].icon}.png`}
+            src={`/static/images/${data.weather[0].icon}.png`}
       
           />
         </div>
