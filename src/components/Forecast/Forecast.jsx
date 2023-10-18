@@ -33,12 +33,12 @@ function Forecast({ data }) {
             <AccordionItemHeading>
               <AccordionItemButton>
                 <div className="daily__item">
-                  <img
+                  {/* <img
                     src={`./icons/${item.weather[0].icon}.png`}
                     // src\components\Forecast\icons
                     className="icon-small"
                     alt="weather"
-                  />
+                  /> */}
                   <label className="day">{forecastDays[index]}</label>
                   <label className="description">
                     {item.weather[0].description}
