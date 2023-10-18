@@ -1,6 +1,7 @@
 import React from "react";
 import "./Current-Weather.css";
 import WeatherDetail from "./WeatherDetail";
+// import { icons } from "../../assets";
 
 function CurrentWeather({ data }) {
   const country = data.city.split(",");
@@ -26,7 +27,10 @@ function CurrentWeather({ data }) {
           <img
             alt="weather icon"
             className="weather__icon"
-            src={`./src/assets/icons/${data.weather[0].icon}.png`}
+            // src={`/icons/${data.weather[0].icon}.png`}
+            // src={`icons/${data.weather[0].icon}.png`}
+            // <%= console.log(data.weather[0].icon) =%>
+            src={`./src/components/Current-Weather/icons/${data.weather[0].icon}.png`}
           />
         </div>
         <div className="weather__card__bottom">
