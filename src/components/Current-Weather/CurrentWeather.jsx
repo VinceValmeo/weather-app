@@ -30,7 +30,8 @@ function CurrentWeather({ data }) {
             // src={`/icons/${data.weather[0].icon}.png`}
             // src={`icons/${data.weather[0].icon}.png`}
             // <%= console.log(data.weather[0].icon) =%>
-            src={`./src/components/Current-Weather/icons/${data.weather[0].icon}.png`}
+            src={`./icons/${data.weather[0].icon}.png`}
+      
           />
         </div>
         <div className="weather__card__bottom">

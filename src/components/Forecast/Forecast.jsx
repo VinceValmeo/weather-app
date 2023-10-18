@@ -34,7 +34,7 @@ function Forecast({ data }) {
               <AccordionItemButton>
                 <div className="daily__item">
                   <img
-                    src={`./src/components/Forecast/icons/${item.weather[0].icon}.png`}
+                    src={`./icons/${item.weather[0].icon}.png`}
                     // src\components\Forecast\icons
                     className="icon-small"
                     alt="weather"
