@@ -24,15 +24,20 @@ function CurrentWeather({ data }) {
               {data.weather[0].description}
             </p>
           </div>
-          <img
+          {/* <img
             alt="weather icon"
             className="weather__icon"
             // src={`/icons/${data.weather[0].icon}.png`}
             // src={`icons/${data.weather[0].icon}.png`}
             // <%= console.log(data.weather[0].icon) =%>
-            src={`/static/images/${data.weather[0].icon}.png`}
+            src={`./icons/${data.weather[0].icon}.png`}
       
-          />
+          /> */}
+          <p>{data.weather[0].icon}</p>
+          <p>{`./icons/${data.weather[0].icon}.png`}</p>
+          <img src={`src/assets/${data.weather[0].icon}.png`}/>
+          
+
         </div>
         <div className="weather__card__bottom">
           <p className="temperature">{Math.round(data.main.temp) + "°C"}</p>
